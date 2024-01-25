@@ -18,3 +18,7 @@ var createCourse = function () {
         price: 100
     };
 };
+var createUser2 = function (user) {
+    return user;
+};
+createUser2({ name: 'John', email: "example@gmail.com", age: 30, occupation: 'Software Engineer', isActive: true });

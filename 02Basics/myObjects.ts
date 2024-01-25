@@ -19,4 +19,21 @@ let createCourse = (): {name:string, price: number} => {
     }
 }
 
+
+type User = {
+    name: string,
+    email: string,
+    age: number,
+    occupation: string,
+    isActive: boolean,
+}
+
+let createUser2 = (user: User) : User => {
+    return user;
+}
+
+type bool = boolean; // type alias - can be used to rename types
+
+createUser2({name: 'John', email: "example@gmail.com", age: 30, occupation: 'Software Engineer', isActive: true})
+
 export {};
