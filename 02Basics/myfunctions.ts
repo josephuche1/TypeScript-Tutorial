@@ -27,6 +27,14 @@ heroes.map((hero):string =>{
     return "hero name is " + hero;
 });
 
+function consoleError(errorMessage: string): void{
+    console.log(errorMessage);
+}
+
+function handleError(errorMessage: string): never{
+    throw new Error(errorMessage);
+}
+
 addTwo(5);
 getUpper('hello');
 signUpUser("Joseph", "example@gmail.com", false);
