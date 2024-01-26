@@ -40,4 +40,13 @@ getUpper('hello');
 signUpUser("Joseph", "example@gmail.com", false);
 loginUser("example@gmail.com", "123456");
 
+// Optional parameters
+function greet(name?: string): void {
+    if (name) {
+        console.log("Hello, " + name + "!");
+    } else {
+        console.log("Hello!");
+    }
+}
+
 export {};
