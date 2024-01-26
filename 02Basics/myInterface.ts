@@ -8,6 +8,15 @@ interface User {
     getCoupon: (couponname : string) => number, // can also be written as getCoupon(couponname : string) : number
 }
 
+interface User{ // reopens the interface and adds more properties
+    githubToken: string,
+}
+
+interface Admin extends User{ // extends the User interface
+    role: "admin" | "ta" | "learner",
+}
+
+// creating an object that implements the interface
 const joseph : User = {
     dbId: 1,
     email: "example @gmail.com",
@@ -17,7 +26,9 @@ const joseph : User = {
     },
     getCoupon: (couponname) => {
         return 100;
-    }
+    }, 
+    githubToken: "1234",
 }
+
 
 export {};
