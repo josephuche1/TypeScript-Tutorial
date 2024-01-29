@@ -17,3 +17,25 @@ function isAdmin(account) {
     }
     return false;
 }
+function logValue(x) {
+    if (x instanceof Date) { // instanceof operator to check if an object is an instance of a class
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+// Type predicat used to narrow down the type of an object within a conditional block
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    }
+    else {
+        pet;
+        return "bird food";
+    }
+}
