@@ -35,3 +35,11 @@ function anotherFunction(val1, val2) {
     };
 }
 anotherFunction(3, { connection: 'localhost', username: 'root', password: 'password' });
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(item) {
+        this.cart.push(item);
+    }
+}

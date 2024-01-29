@@ -58,3 +58,21 @@ function anotherFunction<T, U extends Database>(val1:T, val2:U):object{
 
 anotherFunction(3, {connection: 'localhost', username: 'root', password: 'password'});
 
+interface Quiz{
+    name: string,
+    tyoe: number
+}
+
+interface Course{
+    name: string,
+    author: string
+    subject: string
+}
+
+class Sellable<T>{
+    public cart: T[] = [];
+
+    addToCart(item: T){
+        this.cart.push(item);
+    }
+}
