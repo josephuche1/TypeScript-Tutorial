@@ -34,5 +34,14 @@ class User {
         this._courseCount = count;
     }
 }
+class subUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 5;
+    }
+}
 const joseph = new User("example@gmail.com", "Joseph", "1234");
 // joseph.city = "New York"; // Error: Cannot assign to 'city' because it is a read-only property.

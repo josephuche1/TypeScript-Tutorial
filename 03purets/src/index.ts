@@ -12,7 +12,7 @@
 // A better way to write the above code is to use access modifiers in the constructor parameters.
 class User {
     
-    private _courseCount = 1;
+    protected _courseCount = 1;
     readonly city: string = ""; // You need to initialize the property or use a constructor. You can also make the property readonly.
     constructor(
         public email:string , 
@@ -42,7 +42,14 @@ class User {
     }
 }
 
+class subUser extends User{
+    isFamily: boolean =  true;
+    
+    changeCourseCount(): void{
+        this._courseCount = 5;
+    }
 
+}
 
 const joseph = new User("example@gmail.com", "Joseph", "1234");
 // joseph.city = "New York"; // Error: Cannot assign to 'city' because it is a read-only property.
