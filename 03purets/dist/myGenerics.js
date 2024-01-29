@@ -27,3 +27,11 @@ const getSearchProductsTwo = (products) => {
     // do some dqta processing
     return products[0];
 };
+// using extends to specify that U must be of type Database
+function anotherFunction(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+anotherFunction(3, { connection: 'localhost', username: 'root', password: 'password' });

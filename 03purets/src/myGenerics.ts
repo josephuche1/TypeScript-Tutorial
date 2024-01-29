@@ -39,3 +39,22 @@ const getSearchProductsTwo = <T,>(products: Array<T>): T =>{ // the comma is add
         // do some dqta processing
         return products[0];
 }
+
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+// using extends to specify that U must be of type Database
+function anotherFunction<T, U extends Database>(val1:T, val2:U):object{
+    return{
+        val1,
+        val2
+    }
+}
+
+
+anotherFunction(3, {connection: 'localhost', username: 'root', password: 'password'});
+
