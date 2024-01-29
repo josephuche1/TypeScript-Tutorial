@@ -18,3 +18,12 @@ function identityFour(val) {
     return val;
 }
 identityFour({ brand: 'Nestle', type: 1 });
+function getSearchProducts(products) {
+    // do some dqta processing
+    return products[0];
+}
+// Another way to write the above function
+const getSearchProductsTwo = (products) => {
+    // do some dqta processing
+    return products[0];
+};

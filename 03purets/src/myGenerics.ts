@@ -28,3 +28,14 @@ interface Bottle{
 }
 
 identityFour<Bottle>({brand: 'Nestle', type: 1});
+
+function getSearchProducts<T>(products: Array<T>): T{
+    // do some dqta processing
+    return products[0];
+}
+
+// Another way to write the above function
+const getSearchProductsTwo = <T,>(products: Array<T>): T =>{ // the comma is added to show that T is a generic type and not a parameter
+        // do some dqta processing
+        return products[0];
+}
