@@ -10,12 +10,19 @@ const App: React.FC = () => {
   const [todo, setTodo] = useState<string>('');
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  // console.log(todo);
+  console.log(todo);
+  
 
-  const handleAdd= ():void => {
+  const handleAdd= (e: React.FormEvent):void => {
+    e.preventDefault();
 
+    if(todo){
+      setTodos([...todos, {id: Date.now(), todo, done: false}]);
+      setTodo('');
+    }
+    
   }
-
+  console.log(todos);
   return (
     <div className="App">
       <span className='heading'>Taskify</span>
