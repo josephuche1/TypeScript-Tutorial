@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import InputField from './components/InputField';
 import {Todo} from "./model"
+import TodoList from './components/TodoList';
 
 let name = "joseph";
 
@@ -30,10 +31,11 @@ const App: React.FC = () => {
         setTodo={setTodo}
         handleAdd={handleAdd}
       />
-      {/* <TodoList /> */}
-      {todos.map((t) => (
-        <li>{t.todo}</li>
-      ))}
+      <TodoList 
+        todos={todos}
+        setTodos={setTodos}
+      />
+
     </div>
   );
 }
