@@ -22,7 +22,6 @@ const App: React.FC = () => {
     }
     
   }
-  console.log(todos);
   return (
     <div className="App">
       <span className='heading'>Taskify</span>
@@ -31,6 +30,10 @@ const App: React.FC = () => {
         setTodo={setTodo}
         handleAdd={handleAdd}
       />
+      {/* <TodoList /> */}
+      {todos.map((t) => (
+        <li>{t.todo}</li>
+      ))}
     </div>
   );
 }
