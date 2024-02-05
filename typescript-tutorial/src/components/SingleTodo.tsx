@@ -19,7 +19,7 @@ const SingleTodo:React.FC<Props> = ({todo, todos, setTodos}) => {
    };
 
    const handleDelete = (id: number | string) => {
-    setTodos(todos.filter( todo => todo.id !== id))
+     setTodos(todos.filter( todo => todo.id !== id))
    }
 
   return (
