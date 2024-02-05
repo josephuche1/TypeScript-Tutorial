@@ -43,11 +43,11 @@ const TodoList: React.FC<Props> = ({todos, setTodos, completedTodos, setComplete
               {...provided.droppableProps}
             >
               <span className="todos__heading">Completed Tasks</span>
-              {todos.map((todo) => (
+              {completedTodos.map((todo) => (
                 <SingleTodo
                   todo={todo}
-                  todos={todos}
-                  setTodos={setTodos}
+                  todos={completedTodos}
+                  setTodos={setCompletedTodos}
                   key={todo.id}
                 />
               ))}
