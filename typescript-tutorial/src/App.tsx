@@ -26,7 +26,7 @@ const App: React.FC = () => {
     
   }
   return (
-    <DragDropContext>
+    <DragDropContext onDragEnd={() => {}}>
     <div className="App">
       <span className='heading'>Taskify</span>
       <InputField 
